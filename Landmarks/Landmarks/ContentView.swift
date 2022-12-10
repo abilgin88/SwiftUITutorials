@@ -14,13 +14,8 @@ struct ContentView: View {
     var body: some View {
         
         // view’s body property
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            Text("Turtle Rock")
+                .font(.title)
     }
 }
 
