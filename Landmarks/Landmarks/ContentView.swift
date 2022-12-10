@@ -14,8 +14,23 @@ struct ContentView: View {
     var body: some View {
         
         // view’s body property
+        // Embed in VStack
+        VStack(alignment: .leading) { // Edit the VStack initializer to align the views by their leading edges.
             Text("Turtle Rock")
                 .font(.title)
+            // to add another text view to the right of the location, this for the park’s state.
+            HStack {
+                // add a text view to the stack by dragging a Text view from the library(+).
+                Text("Joshua Tree National Park")
+                    // Set the location’s font to subheadline.
+                    .font(.subheadline)
+                    // adding a Spacer to the horizontal stack holding the two text views.
+                Spacer()
+                Text("California")
+                    .font(.subheadline) //  give the landmark’s name and details a little more space.
+            }
+        }
+        .padding()
     }
 }
 
