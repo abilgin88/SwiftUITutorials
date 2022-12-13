@@ -25,26 +25,19 @@ struct Landmark: Hashable, Codable {
     var image: Image {
         Image(imageName)
     }
-    
+
     // Add a coordinates property to the structure using a nested Coordinates type that reflects the storage in the JSON data structure.
-    private var coordinates: Coordinate
+    private var coordinates: Coordinates
     
     // Compute a locationCoordinate property that’s useful for interacting with the MapKit framework.
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
-            latitude: coordinates.latitude ,
-            longitude: coordinates.longtude
-        )
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude)
     }
-    
-    struct Coordinate: Hashable, Codable {
+
+    struct Coordinates: Hashable, Codable {
         var latitude: Double
-        var longtude: Double
+        var longitude: Double
     }
-    
-    
 }
-
-
-
-
